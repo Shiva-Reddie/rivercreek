@@ -1,0 +1,557 @@
+/* General Styles */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
+
+:root {
+  --primary-color: #23346C;
+  --secondary-color: #F7961D;
+  --third-color: #0C8B44;
+  --text-color: #333;
+  --light-gray: #f8f9fa;
+  --card-shadow: 0 10px 30px rgba(12, 74, 59, 0.1);
+  --transition: all 0.3s ease;
+  --p: #23346C;
+  --s: #F7961D;
+  --g: #0C8B44;
+}
+
+.section-padding {
+  padding: 100px 0;
+}
+
+/* Hero Section - Base styles for all pages */
+.neighborhood-hero,
+.gallery_ban,
+.ameneties_ban,
+.contact_ban {
+  position: relative;
+  height: 50vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+
+section.neighborhood-hero.Aminities_ban {
+  background-image: url(https://img.freepik.com/premium-photo/night-view-bangkoks-cityscape-with-illuminated-skyscrapers-urban-architecture-twilight-sky_875722-70930.jpg?w=1380);
+}
+
+
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 2rem;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  font-weight: 700;
+  color: #fff;
+  line-height: normal;
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-bottom: 1.5rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+}
+
+/* Breadcrumb styling */
+.hero-content .breadcrumb {
+  display: flex;
+  align-items: center;
+  margin: 25px 0 0;
+  padding: 0;
+  list-style: none;
+  display: inline-flex;
+  background-color: var(--g);
+  padding: 10px;
+  border-radius: 6px;
+  display: none;
+}
+
+.hero-content .breadcrumb li {
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  text-transform: capitalize;
+}
+
+.hero-content .breadcrumb li:not(:last-child)::after {
+  content: '\f054';
+  /* Font Awesome chevron-right */
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0 15px;
+}
+
+.hero-content .breadcrumb .home {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+.hero-content .breadcrumb .home i {
+  color: var(--secondary-color);
+}
+
+.hero-content .breadcrumb .home:hover {
+  color: var(--secondary-color);
+}
+
+.hero-content .breadcrumb li:last-child {
+  color: #a3bfc1;
+  font-weight: 700;
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+
+  .neighborhood-hero,
+  .gallery_ban,
+  .ameneties_ban,
+  .contact_ban {
+    height: 50vh;
+  }
+
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 767px) {
+
+  .neighborhood-hero,
+  .gallery_ban,
+  .ameneties_ban,
+  .contact_ban {
+    height: 40vh;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1.1rem;
+  }
+
+  .hero-content .breadcrumb li {
+    font-size: 14px;
+  }
+
+  .hero-content .breadcrumb li:not(:last-child)::after {
+    margin: 0 10px;
+  }
+}
+
+/* Section Styling */
+.space {
+  padding: 50px 0;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(12, 74, 59, 0.05);
+}
+
+.heading-section {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.heading-section .title {
+  /* font-size: 2.5rem; */
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 0rem;
+}
+
+.gradient-line {
+  height: 4px;
+  width: 80px;
+  margin: 1rem auto;
+  background: linear-gradient(90deg,
+      var(--primary-color),
+      var(--secondary-color),
+      var(--third-color));
+  border-radius: 2px;
+  box-shadow: 0 2px 10px rgba(12, 74, 59, 0.15);
+}
+
+/* Location Cards */
+.location-card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+  transition: var(--transition);
+  height: 100%;
+}
+
+.location-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(12, 74, 59, 0.15);
+}
+
+.card-image {
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition);
+}
+
+.location-card:hover .card-image img {
+  transform: scale(1.1);
+}
+
+.card-content {
+  padding: 2rem;
+}
+
+.card-content h3 {
+  color: var(--primary-color);
+  font-size: 22px;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.location-details .address {
+  color: #666;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.location-details .description {
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* Shopping Cards */
+.shopping-card {
+  background: white;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: var(--card-shadow);
+  transition: var(--transition);
+}
+
+.shopping-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Theme Park Cards */
+.park-card {
+  background: white;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: var(--card-shadow);
+  transition: var(--transition);
+}
+
+.park-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Icons */
+.fa-calendar-alt {
+  color: #fff;
+}
+
+/* Background Alternating */
+.bg-light {
+  background-color: #f8f9fa;
+}
+
+/* Mall Cards */
+.mall-card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  height: 100%;
+}
+
+.mall-image {
+  position: relative;
+  height: 250px;
+}
+
+.distance-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+.mall-features {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.mall-features span {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.mall-features i {
+  margin-right: 0.5rem;
+  color: var(--primary-color);
+}
+
+/* CTA Section */
+.cta-section {
+  position: relative;
+  padding: 100px 0;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  color: white;
+}
+
+.btn-primary {
+  display: inline-block;
+  padding: 1rem 1rem;
+  background: white;
+  color: var(--primary-color);
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Feature Cards */
+.feature-card {
+  background: white;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: var(--transition);
+  height: 100%;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+}
+
+.card-icon {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg,
+      var(--primary-color),
+      var(--third-color));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.card-icon i {
+  font-size: 1.8rem;
+  color: white;
+}
+
+.feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+}
+
+.feature-list li {
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: center;
+}
+
+.feature-list i {
+  color: var(--primary-color);
+  margin-right: 0.5rem;
+}
+
+/* Updated Icon Styling */
+.card-content h3 i {
+  font-size: 1.8rem;
+  margin-right: 0.8rem;
+  background: linear-gradient(135deg,
+      var(--primary-color),
+      var(--secondary-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  vertical-align: middle;
+}
+
+.location-details i,
+.shopping-card i,
+.park-card i {
+  font-size: 1.2rem;
+  margin-right: 0.5rem;
+  background: linear-gradient(135deg,
+      var(--primary-color),
+      var(--secondary-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  vertical-align: middle;
+}
+
+.cuisine-tags .tag i,
+.shopping-features i,
+.park-features i {
+  font-size: 1rem;
+  margin-right: 0.4rem;
+}
+
+/* Feature Lists */
+.facility-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.facility-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.8rem;
+}
+
+/* Feature Spans */
+.shopping-features,
+.park-features {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+
+.shopping-features span,
+.park-features span {
+  display: flex;
+  align-items: center;
+  color: var(--text-color);
+}
+
+/* Icon Highlighting */
+.description i {
+  font-size: 1.2rem;
+  margin: 0 4px;
+  background: linear-gradient(135deg,
+      var(--primary-color),
+      var(--third-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  vertical-align: middle;
+  transition: all 0.3s ease;
+  padding: 4px;
+  border-radius: 50%;
+}
+
+.description i:hover {
+  transform: scale(1.2);
+  background: linear-gradient(45deg,
+      var(--secondary-color),
+      var(--primary-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  box-shadow: 0 0 15px rgba(12, 74, 59, 0.3);
+  cursor: pointer;
+}
+
+/* Add pulsing animation for icons */
+@keyframes iconPulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Apply animation to specific icons */
+.icon-location1,
+.icon-villa-line,
+.icon-commercial-line,
+.icon-townhouse-2,
+.icon-farm,
+.icon-warehouse,
+.icon-land,
+.icon-penhouse,
+.icon-home,
+.icon-commercial,
+.icon-office1 {
+  animation: iconPulse 2s infinite;
+  animation-play-state: paused;
+}
+
+/* Play animation on hover */
+.description i:hover {
+  animation-play-state: running;
+}
+
+/* Add a subtle glow effect */
+.description i::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle,
+      rgba(12, 74, 59, 0.2),
+      transparent 70%);
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.description i:hover::after {
+  opacity: 1;
+}
+
+/* Remove title-inner styles since we're using hero-content consistently */
+.title-inner {
+  display: none;
+}

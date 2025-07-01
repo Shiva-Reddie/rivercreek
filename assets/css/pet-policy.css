@@ -1,0 +1,81 @@
+:root {
+    --pet-policy-bg: #f8f9fa;
+    --pet-policy-card-bg: #ffffff;
+    --pet-policy-border: #e9ecef;
+    --pet-policy-text: #495057;
+    --pet-policy-heading: #212529;
+    --pet-policy-accent: var(--primary-color);
+}
+
+.pet-policy {
+    padding: 80px 0;
+    background-color: var(--pet-policy-bg);
+}
+
+.pet-policy .heading-section {
+    margin-bottom: 3rem;
+}
+
+.pet-policy-card {
+    background: var(--pet-policy-card-bg);
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.pet-policy-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.info-item i {
+    font-size: 1.5rem;
+    color: var(--pet-policy-accent);
+}
+
+.info-content h4 {
+    font-size: 1.1rem;
+    color: var(--pet-policy-heading);
+    margin-bottom: 0.5rem;
+}
+
+.info-content p {
+    color: var(--pet-policy-text);
+    margin: 0;
+}
+
+.pet-policy-details {
+    background: var(--pet-policy-card-bg);
+    border-radius: 16px;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+.pet-policy-details h3 {
+    color: var(--pet-policy-heading);
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.restrictions-list {
+    color: var(--pet-policy-text);
+    line-height: 1.6;
+    margin-top: 1rem;
+}
+
+.pet-policy-note {
+    background: rgba(var(--primary-color-rgb), 0.1);
+    border-left: 4px solid var(--pet-policy-accent);
+    padding: 1rem;
+    margin-top: 1.5rem;
+    border-radius: 0 8px 8px 0;
+}
